@@ -9,6 +9,20 @@
 #ifndef CABackendKeys_h
 #define CABackendKeys_h
 
+/* Application Keys */
+
+#define kAppName @"ContrAlert"
+
+/* Parse Keys */
+
+#define kParseAppId @"tji9w8P9LQTvDb25nsjIBWvh9uNJSa7ojca0QAoM"
+#define kParseAppClientKey @"fXiLN3WiIi2Cl2qG7SSogEP8rAn1QN0a4TW8VI1v"
+#define kParseApiAddress @"https://parseapi.back4app.com/"
+
+/* OneSignal Keys */
+
+#define kOneSignalAppId @"69e263ff-1803-4fa3-8629-8d36ee9665d0"
+
 /* Users */
 
 #define kUsersClassName @"_User"
@@ -59,6 +73,17 @@
 #define kFollowsClassName @"Follows"
 #define kFollowsAUser @"aUser"
 #define kFollowsIsFollowing @"isFollowing"
+
+/* Conversations */
+
+#define kConversationsClassName @"Conversations"
+#define kConversationsUser @"user"
+#define kConversationsGroupId @"groupId"
+#define kConversationsDescription @"description"
+#define kConversationsLastUser @"lastUser"
+#define kConversationsLastMessage @"lastMessage"
+#define kConversationsCounter @"counter"
+#define kConversationsUpdatedAction @"updatedAction"
 
 /* Messages */
 

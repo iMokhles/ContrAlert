@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "CAHelper.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +18,20 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+
+#pragma mark - Parse Methods
+    [[CAHelper sharedInstance] initParseServer];
+    [[CAHelper sharedInstance] trackWithLaunchOptions:launchOptions];
+#pragma mark - Facebook Methods
+    // waiting keys setup
+//    [[CAHelper sharedInstance] initFacebookUtilsWithLaunchOptions:launchOptions];
+#pragma mark - TWITTER Methods
+    // waiting keys setup
+//    [[CAHelper sharedInstance] initTwitterUtils];
+#pragma mark - PUSH Methods
+    // waiting certs setup
+//    [[CAHelper sharedInstance] initOneSignalWithLaunchOptions:launchOptions];
+    
     return YES;
 }
 
@@ -40,6 +55,7 @@
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+    [FBSDKAppEvents activateApp];
 }
 
 

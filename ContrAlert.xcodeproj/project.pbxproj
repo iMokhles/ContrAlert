@@ -21,7 +21,42 @@
 		430274BD1EA7B35D00042809 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 430274AB1EA7B35D00042809 /* LaunchScreen.storyboard */; };
 		430274BE1EA7B35D00042809 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 430274AE1EA7B35D00042809 /* Main.storyboard */; };
 		430274BF1EA7B35D00042809 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 430274B31EA7B35D00042809 /* ViewController.m */; };
+		430274CC1EA7D61300042809 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 430274CA1EA7D61300042809 /* Bolts.framework */; };
+		430274CD1EA7D61300042809 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 430274CB1EA7D61300042809 /* Parse.framework */; };
+		430274D71EA7D7BF00042809 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 430274D41EA7D7BF00042809 /* FBSDKCoreKit.framework */; };
+		430274D81EA7D7BF00042809 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 430274D51EA7D7BF00042809 /* FBSDKLoginKit.framework */; };
+		430274D91EA7D7BF00042809 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 430274D61EA7D7BF00042809 /* FBSDKShareKit.framework */; };
+		430274DB1EA7E1D800042809 /* ParseTwitterUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 430274DA1EA7E1D800042809 /* ParseTwitterUtils.framework */; };
+		430274E41EA7E48C00042809 /* NotificationService.m in Sources */ = {isa = PBXBuildFile; fileRef = 430274E31EA7E48C00042809 /* NotificationService.m */; };
+		430274E81EA7E48C00042809 /* OneSignalNotificationServiceExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 430274E01EA7E48C00042809 /* OneSignalNotificationServiceExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		430274F21EA7E5BD00042809 /* ParseFacebookUtilsV4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 430274F11EA7E5BD00042809 /* ParseFacebookUtilsV4.framework */; };
+		430274F41EA7E5FF00042809 /* OneSignal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 430274F31EA7E5FF00042809 /* OneSignal.framework */; };
+		430274F51EA7E60200042809 /* OneSignal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 430274F31EA7E5FF00042809 /* OneSignal.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		430274E61EA7E48C00042809 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 430274461EA7A5D400042809 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 430274DF1EA7E48C00042809;
+			remoteInfo = OneSignalNotificationServiceExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		430274EC1EA7E48C00042809 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				430274E81EA7E48C00042809 /* OneSignalNotificationServiceExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		4302744E1EA7A5D400042809 /* ContrAlert.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ContrAlert.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -51,6 +86,19 @@
 		430274B21EA7B35D00042809 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		430274B31EA7B35D00042809 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		430274C01EA7BF0500042809 /* CABackendKeys.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CABackendKeys.h; sourceTree = "<group>"; };
+		430274CA1EA7D61300042809 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		430274CB1EA7D61300042809 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		430274D41EA7D7BF00042809 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		430274D51EA7D7BF00042809 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		430274D61EA7D7BF00042809 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
+		430274DA1EA7E1D800042809 /* ParseTwitterUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseTwitterUtils.framework; sourceTree = "<group>"; };
+		430274E01EA7E48C00042809 /* OneSignalNotificationServiceExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = OneSignalNotificationServiceExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		430274E21EA7E48C00042809 /* NotificationService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationService.h; sourceTree = "<group>"; };
+		430274E31EA7E48C00042809 /* NotificationService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationService.m; sourceTree = "<group>"; };
+		430274E51EA7E48C00042809 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		430274F11EA7E5BD00042809 /* ParseFacebookUtilsV4.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtilsV4.framework; sourceTree = "<group>"; };
+		430274F31EA7E5FF00042809 /* OneSignal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OneSignal.framework; sourceTree = "<group>"; };
+		430274F61EA7E69400042809 /* ContrAlert.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ContrAlert.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +106,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				430274CD1EA7D61300042809 /* Parse.framework in Frameworks */,
+				430274D71EA7D7BF00042809 /* FBSDKCoreKit.framework in Frameworks */,
+				430274F21EA7E5BD00042809 /* ParseFacebookUtilsV4.framework in Frameworks */,
+				430274D91EA7D7BF00042809 /* FBSDKShareKit.framework in Frameworks */,
+				430274D81EA7D7BF00042809 /* FBSDKLoginKit.framework in Frameworks */,
+				430274DB1EA7E1D800042809 /* ParseTwitterUtils.framework in Frameworks */,
+				430274CC1EA7D61300042809 /* Bolts.framework in Frameworks */,
+				430274F41EA7E5FF00042809 /* OneSignal.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		430274DD1EA7E48C00042809 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				430274F51EA7E60200042809 /* OneSignal.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				430274501EA7A5D400042809 /* ContrAlert */,
+				430274E11EA7E48C00042809 /* OneSignalNotificationServiceExtension */,
 				4302744F1EA7A5D400042809 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -76,6 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				4302744E1EA7A5D400042809 /* ContrAlert.app */,
+				430274E01EA7E48C00042809 /* OneSignalNotificationServiceExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -83,15 +149,17 @@
 		430274501EA7A5D400042809 /* ContrAlert */ = {
 			isa = PBXGroup;
 			children = (
+				430274F61EA7E69400042809 /* ContrAlert.entitlements */,
 				4302748E1EA7B35D00042809 /* AppDelegate */,
 				430274911EA7B35D00042809 /* CoreData */,
+				430274C11EA7D59300042809 /* Frameworks */,
 				430274941EA7B35D00042809 /* Helpers */,
 				4302749C1EA7B35D00042809 /* SideMenu */,
+				430274511EA7A5D400042809 /* Supporting Files */,
 				430274A31EA7B35D00042809 /* TabBar */,
 				430274A61EA7B35D00042809 /* Tables */,
 				430274A91EA7B35D00042809 /* UserInterface */,
 				430274B01EA7B35D00042809 /* ViewControllers */,
-				430274511EA7A5D400042809 /* Supporting Files */,
 				430274601EA7A5D400042809 /* Assets.xcassets */,
 				430274651EA7A5D400042809 /* Info.plist */,
 			);
@@ -126,6 +194,7 @@
 		430274941EA7B35D00042809 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				430274C01EA7BF0500042809 /* CABackendKeys.h */,
 				430274951EA7B35D00042809 /* CAConstant.h */,
 				430274961EA7B35D00042809 /* CAConstant.mm */,
 				430274971EA7B35D00042809 /* CAHelper.h */,
@@ -133,7 +202,6 @@
 				430274991EA7B35D00042809 /* CAMacros.h */,
 				4302749A1EA7B35D00042809 /* CATheme.h */,
 				4302749B1EA7B35D00042809 /* CATheme.m */,
-				430274C01EA7BF0500042809 /* CABackendKeys.h */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -225,6 +293,55 @@
 			path = ViewController;
 			sourceTree = "<group>";
 		};
+		430274C11EA7D59300042809 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				430274C71EA7D5AB00042809 /* Facebook */,
+				430274ED1EA7E52900042809 /* OneSignal */,
+				430274C21EA7D59B00042809 /* Parse */,
+			);
+			path = Frameworks;
+			sourceTree = "<group>";
+		};
+		430274C21EA7D59B00042809 /* Parse */ = {
+			isa = PBXGroup;
+			children = (
+				430274CA1EA7D61300042809 /* Bolts.framework */,
+				430274CB1EA7D61300042809 /* Parse.framework */,
+				430274F11EA7E5BD00042809 /* ParseFacebookUtilsV4.framework */,
+				430274DA1EA7E1D800042809 /* ParseTwitterUtils.framework */,
+			);
+			path = Parse;
+			sourceTree = "<group>";
+		};
+		430274C71EA7D5AB00042809 /* Facebook */ = {
+			isa = PBXGroup;
+			children = (
+				430274D41EA7D7BF00042809 /* FBSDKCoreKit.framework */,
+				430274D51EA7D7BF00042809 /* FBSDKLoginKit.framework */,
+				430274D61EA7D7BF00042809 /* FBSDKShareKit.framework */,
+			);
+			path = Facebook;
+			sourceTree = "<group>";
+		};
+		430274E11EA7E48C00042809 /* OneSignalNotificationServiceExtension */ = {
+			isa = PBXGroup;
+			children = (
+				430274E51EA7E48C00042809 /* Info.plist */,
+				430274E21EA7E48C00042809 /* NotificationService.h */,
+				430274E31EA7E48C00042809 /* NotificationService.m */,
+			);
+			path = OneSignalNotificationServiceExtension;
+			sourceTree = "<group>";
+		};
+		430274ED1EA7E52900042809 /* OneSignal */ = {
+			isa = PBXGroup;
+			children = (
+				430274F31EA7E5FF00042809 /* OneSignal.framework */,
+			);
+			path = OneSignal;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -235,15 +352,34 @@
 				4302744A1EA7A5D400042809 /* Sources */,
 				4302744B1EA7A5D400042809 /* Frameworks */,
 				4302744C1EA7A5D400042809 /* Resources */,
+				430274EC1EA7E48C00042809 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				430274E71EA7E48C00042809 /* PBXTargetDependency */,
 			);
 			name = ContrAlert;
 			productName = ContrAlert;
 			productReference = 4302744E1EA7A5D400042809 /* ContrAlert.app */;
 			productType = "com.apple.product-type.application";
+		};
+		430274DF1EA7E48C00042809 /* OneSignalNotificationServiceExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 430274E91EA7E48C00042809 /* Build configuration list for PBXNativeTarget "OneSignalNotificationServiceExtension" */;
+			buildPhases = (
+				430274DC1EA7E48C00042809 /* Sources */,
+				430274DD1EA7E48C00042809 /* Frameworks */,
+				430274DE1EA7E48C00042809 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OneSignalNotificationServiceExtension;
+			productName = OneSignalNotificationServiceExtension;
+			productReference = 430274E01EA7E48C00042809 /* OneSignalNotificationServiceExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -255,6 +391,19 @@
 				ORGANIZATIONNAME = iMokhles;
 				TargetAttributes = {
 					4302744D1EA7A5D400042809 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = EAST223S7M;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
+					};
+					430274DF1EA7E48C00042809 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = EAST223S7M;
 						ProvisioningStyle = Automatic;
@@ -275,6 +424,7 @@
 			projectRoot = "";
 			targets = (
 				4302744D1EA7A5D400042809 /* ContrAlert */,
+				430274DF1EA7E48C00042809 /* OneSignalNotificationServiceExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -287,6 +437,13 @@
 				430274BE1EA7B35D00042809 /* Main.storyboard in Resources */,
 				430274611EA7A5D400042809 /* Assets.xcassets in Resources */,
 				430274BD1EA7B35D00042809 /* LaunchScreen.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		430274DE1EA7E48C00042809 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,7 +468,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		430274DC1EA7E48C00042809 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				430274E41EA7E48C00042809 /* NotificationService.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		430274E71EA7E48C00042809 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 430274DF1EA7E48C00042809 /* OneSignalNotificationServiceExtension */;
+			targetProxy = 430274E61EA7E48C00042809 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		430274AB1EA7B35D00042809 /* LaunchScreen.storyboard */ = {
@@ -320,6 +493,7 @@
 				430274AC1EA7B35D00042809 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 		430274AE1EA7B35D00042809 /* Main.storyboard */ = {
@@ -328,6 +502,7 @@
 				430274AF1EA7B35D00042809 /* Base */,
 			);
 			name = Main.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -425,10 +600,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ContrAlert/ContrAlert.entitlements;
 				DEVELOPMENT_TEAM = EAST223S7M;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ContrAlert",
+					"$(PROJECT_DIR)/ContrAlert/Frameworks/Parse",
+					"$(PROJECT_DIR)/ContrAlert/Frameworks/Facebook",
+					"$(PROJECT_DIR)/ContrAlert/Frameworks",
+					"$(PROJECT_DIR)/ContrAlert/Frameworks/OneSignal",
+				);
 				INFOPLIST_FILE = ContrAlert/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.imokhles.ContrAlert;
+				PRODUCT_BUNDLE_IDENTIFIER = com.imokhles.ContrAlertApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -437,11 +621,54 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ContrAlert/ContrAlert.entitlements;
 				DEVELOPMENT_TEAM = EAST223S7M;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ContrAlert",
+					"$(PROJECT_DIR)/ContrAlert/Frameworks/Parse",
+					"$(PROJECT_DIR)/ContrAlert/Frameworks/Facebook",
+					"$(PROJECT_DIR)/ContrAlert/Frameworks",
+					"$(PROJECT_DIR)/ContrAlert/Frameworks/OneSignal",
+				);
 				INFOPLIST_FILE = ContrAlert/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.imokhles.ContrAlert;
+				PRODUCT_BUNDLE_IDENTIFIER = com.imokhles.ContrAlertApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		430274EA1EA7E48C00042809 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = EAST223S7M;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ContrAlert/Frameworks",
+					"$(PROJECT_DIR)/ContrAlert/Frameworks/OneSignal",
+				);
+				INFOPLIST_FILE = OneSignalNotificationServiceExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.imokhles.ContrAlert.OneSignalNotificationServiceExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		430274EB1EA7E48C00042809 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = EAST223S7M;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ContrAlert/Frameworks",
+					"$(PROJECT_DIR)/ContrAlert/Frameworks/OneSignal",
+				);
+				INFOPLIST_FILE = OneSignalNotificationServiceExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.imokhles.ContrAlert.OneSignalNotificationServiceExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 			};
 			name = Release;
 		};
@@ -462,6 +689,15 @@
 			buildConfigurations = (
 				430274691EA7A5D400042809 /* Debug */,
 				4302746A1EA7A5D400042809 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		430274E91EA7E48C00042809 /* Build configuration list for PBXNativeTarget "OneSignalNotificationServiceExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				430274EA1EA7E48C00042809 /* Debug */,
+				430274EB1EA7E48C00042809 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
