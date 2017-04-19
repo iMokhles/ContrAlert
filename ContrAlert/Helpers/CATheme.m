@@ -42,7 +42,7 @@ static id _sharedTheme = nil;
 - (instancetype)init {
     self = [super init];
     if (self) {
-        
+        _mainBackgroundColor = [UIColor whiteColor];
     }
     return self;
 }
