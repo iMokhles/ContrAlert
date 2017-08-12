@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Info</key>
+	<array>
+		<dict>
+			<key>pageImage</key>
+			<string>MainBackground1.png</string>
+			<key>pageTitle</key>
+			<string>THIS FIRST PAGE INTRO DESCRIPTION</string>
+		</dict>
+		<dict>
+			<key>pageImage</key>
+			<string>MainBackground1.png</string>
+			<key>pageTitle</key>
+			<string>THIS SECOND PAGE INTRO DESCRIPTION</string>
+		</dict>
+		<dict>
+			<key>pageImage</key>
+			<string>MapBackground.png</string>
+			<key>pageTitle</key>
+			<string>THIS THIRD PAGE INTRO DESCRIPTION</string>
+		</dict>
+		<dict>
+			<key>pageImage</key>
+			<string>MainBackground1.png</string>
+			<key>pageTitle</key>
+			<string>THIS FOURTH PAGE INTRO DESCRIPTION</string>
+		</dict>
+		<dict>
+			<key>pageImage</key>
+			<string>MainBackground1.png</string>
+			<key>pageTitle</key>
+			<string>THIS FIVETH PAGE INTRO DESCRIPTION</string>
+		</dict>
+		<dict>
+			<key>pageImage</key>
+			<string>MainBackground1.png</string>
+			<key>pageTitle</key>
+			<string>THIS SIXETH PAGE INTRO DESCRIPTION</string>
+		</dict>
+	</array>
+</dict>
+</plist>

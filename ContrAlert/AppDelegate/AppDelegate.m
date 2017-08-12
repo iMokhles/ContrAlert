@@ -19,22 +19,30 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
 
+#pragma mark - Theme Methods
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent animated:YES];
 #pragma mark - Parse Methods
     [[CAHelper sharedInstance] initParseServer];
     [[CAHelper sharedInstance] trackWithLaunchOptions:launchOptions];
 #pragma mark - Facebook Methods
     // waiting keys setup
 //    [[CAHelper sharedInstance] initFacebookUtilsWithLaunchOptions:launchOptions];
-#pragma mark - TWITTER Methods
+#pragma mark - Twitter Methods
     // waiting keys setup
 //    [[CAHelper sharedInstance] initTwitterUtils];
-#pragma mark - PUSH Methods
+#pragma mark - Push Methods
     // waiting certs setup
 //    [[CAHelper sharedInstance] initOneSignalWithLaunchOptions:launchOptions];
     
     return YES;
 }
 
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
+    return [[FBSDKApplicationDelegate sharedInstance] application:application
+                                                          openURL:url
+                                                sourceApplication:sourceApplication
+                                                       annotation:annotation];
+}
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

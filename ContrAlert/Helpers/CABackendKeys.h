@@ -23,16 +23,30 @@
 
 #define kOneSignalAppId @"69e263ff-1803-4fa3-8629-8d36ee9665d0"
 
+/* Twitter Keys */
+
+#define kTwitterConsumerKey @"69e263ff-1803-4fa3-8629-8d36ee9665d0"
+#define kTwitterConsumerSecret @"69e263ff-1803-4fa3-8629-8d36ee9665d0"
+
 /* Users */
 
 #define kUsersClassName @"_User"
 #define kUsersAvatar @"avatar"
+#define kUsersAvatarThumbnail @"avatarThumbnail"
 #define kUsersCoverImage @"coverImage"
 #define kUsersUserName @"username"
 #define kUsersFullName @"fullName"
 #define kUsersEmail @"email"
+#define kUsersPassword @"password"
+#define kUsersPasswordConfirmation @"password_confirmation"
 #define kUsersAboutMe @"aboutMe"
-#define kUsersIsReported @"isReported"
+#define kUsersGender @"gender"
+
+/* Reports */
+
+#define kReportsClassName @"Reports"
+#define kReportsObject @"reportsObject"
+#define kReportsIsReported @"isReported"
 #define kUsersReportMessage @"reportMessage"
 
 /* Alerts */
@@ -43,9 +57,13 @@
 #define kAlertsImage @"alertImageFile"
 #define kAlertsCity @"alertCity"
 #define kAlertsLikes @"alertLikes"
+#define kAlertsComments @"alertComments"
+#define kAlertsLikers @"alertLikers"
+#define kAlertsCommenters @"alertCommenters"
 #define kAlertsCreatedAt @"createdAt"
 #define kAlertsIsReported @"isReported"
 #define kAlertsReportMessage @"reportMessage"
+#define kAlertsReports @"alertReports"
 #define kAlertsKeywords @"alertKeywords"
 
 /* Activities */
@@ -54,6 +72,8 @@
 #define kActivitiesCurrentUser @"currentUser"
 #define kActivitiesOtherUser @"otherUser"
 #define kActivitiesText @"activityText"
+#define kActivitiesType @"activityType"
+#define kActivitiesAlertPointer @"alertPointer"
 
 /* Likes */
 
@@ -77,22 +97,28 @@
 /* Conversations */
 
 #define kConversationsClassName @"Conversations"
-#define kConversationsUser @"user"
-#define kConversationsGroupId @"groupId"
+#define kConversationsSenderUser @"senderUser"
+#define kConversationsConversationId @"conversationId"
 #define kConversationsDescription @"description"
-#define kConversationsLastUser @"lastUser"
+#define kConversationsRecipientUser @"recipientUser"
 #define kConversationsLastMessage @"lastMessage"
-#define kConversationsCounter @"counter"
-#define kConversationsUpdatedAction @"updatedAction"
+#define kConversationsUnreadCounter @"unreadCounter"
+#define kConversationsLastUpdate @"lastUpdate"
 
 /* Messages */
 
 #define kMessagesClassName @"Messages"
 #define kMessagesUser @"user"
-#define kMessagesGroupId @"groupId"
+#define kMessagesConversationId @"conversationId"
 #define kMessagesText @"text"
-#define kMessagesPicture @"picture"
-#define kMessagesVideo @"video"
+#define kMessagesAttachment @"attachment"
 #define kMessagesCreatedAt @"createdAt"
+
+/* NSNotifications */
+
+#define kRefreshCurrentConversation @"kRefreshCurrentConversation"
+#define kRefreshCurrentConversationsList @"kRefreshCurrentConversationsList"
+#define kRefreshTimeline @"kRefreshTimeline"
+#define kRefreshActivties @"kRefreshActivties"
 
 #endif /* CABackendKeys_h */
