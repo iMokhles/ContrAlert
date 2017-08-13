@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "CAHelper.h"
+#import "CATheme.h"
 
 @interface AppDelegate ()
 
@@ -33,6 +34,10 @@
 #pragma mark - Push Methods
     // waiting certs setup
 //    [[CAHelper sharedInstance] initOneSignalWithLaunchOptions:launchOptions];
+#pragma mark - Check Invalid Session Token
+    [[CAHelper sharedInstance] checkInvalidCurrentToken];
+#pragma mark - Setup Main ViewController
+    [[CATheme defaultTheme] setMainViewControllerIfNeeded];
     
     return YES;
 }

@@ -15,6 +15,8 @@
 #import <ParseTwitterUtils/ParseTwitterUtils.h>
 #import <OneSignal/OneSignal.h>
 
+#import "UIViewController+ECSlidingViewController.h"
+
 // Blocks
 typedef void(^HelperBlockCompletion)(id object, NSError *error);
 
@@ -70,6 +72,9 @@ typedef void(^HelperBlockCompletion)(id object, NSError *error);
 - (void)initTwitterUtils;
 #pragma mark - PUSH Methods
 - (void)initOneSignalWithLaunchOptions:(NSDictionary *)launchOptions;
+#pragma mark - Check Invalid Session Token
+- (void)checkInvalidCurrentToken;
+
 #pragma mark - Private Methods
 
 - (UIImage *)resizeImage:(UIImage *)image withSize:(CGSize)size andScale:(CGFloat)scale;
@@ -84,6 +89,7 @@ typedef void(^HelperBlockCompletion)(id object, NSError *error);
 - (void)cropImage:(UIImage *)image fromTarget:(id)target;
 - (void)showPickerFromTarget:(id)target withOptions:(NSArray *)options andMessage:(NSString *)message completion:(HelperBlockCompletion)compeltion;
 - (UIImage *)roundedRectImageFromImage:(UIImage *)image withRadious:(CGFloat)radious;
+- (UIStoryboard *)mainStoryboard;
 - (NSString *)getLibraryPath;
 - (NSString *)getDocumentsPath;
 - (CGRect)windowBounds;

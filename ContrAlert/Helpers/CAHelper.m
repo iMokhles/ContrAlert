@@ -68,8 +68,8 @@ static CAHelper *_sharedInstance = nil;
     user[kUsersFullName] = signupInfo[kUsersFullName];
     user.username = signupInfo[kUsersUserName];
     user.password = signupInfo[kUsersPassword];
-    user.email = signupInfo[kUsersPassword];
-    user[kUsersAboutMe] = signupInfo[kUsersAboutMe];
+    user.email = signupInfo[kUsersEmail];
+    user[kUsersGender] = signupInfo[kUsersGender];
     [user signUpInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
         completionBlock(@(succeeded), error);
     }];
@@ -85,8 +85,8 @@ static CAHelper *_sharedInstance = nil;
         if (error == nil) {
             [avatarFile saveInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
                 if (error == nil) {
-                    user[kUsersAvatarThumbnail] = thumnailImage;
-                    user[kUsersAvatar] = avatarImage;
+                    user[kUsersAvatarThumbnail] = thumnailFile;
+                    user[kUsersAvatar] = avatarFile;
                     [user saveInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
                         completionBlock(@(succeeded), error);
                     }];
@@ -545,6 +545,18 @@ static CAHelper *_sharedInstance = nil;
                                appId:kOneSignalAppId];
 }
 
+#pragma mark - Check Invalid Session Token
+- (void)checkInvalidCurrentToken {
+    PFUser *currentUser = [PFUser currentUser];
+    if ([currentUser isAuthenticated]) {
+        [PFUser becomeInBackground:[currentUser sessionToken] block:^(PFUser * _Nullable user, NSError * _Nullable error) {
+            if (error != nil) {
+                [PFUser logOutInBackground];
+            }
+        }];
+    }
+}
+
 #pragma mark - Private Methods
 
 - (UIImage *)resizeImage:(UIImage *)image withSize:(CGSize)size andScale:(CGFloat)scale {
@@ -579,9 +591,9 @@ static CAHelper *_sharedInstance = nil;
     if(username.length < kUsernameMinimumLength) {
         return NO;
     }
-    if(![username hasPrefix:@"@"]) {
-        return NO;
-    }
+//    if(![username hasPrefix:@"@"]) {
+//        return NO;
+//    }
     NSCharacterSet *set = [[NSCharacterSet
                             characterSetWithCharactersInString:@"@ABCDEFGHIKLMNOPQRSTUVWXYZabcdefghilkmnopqrstuvwxyz1234567890._"] invertedSet];
     if ([username rangeOfCharacterFromSet:set].location != NSNotFound){
@@ -687,6 +699,10 @@ static CAHelper *_sharedInstance = nil;
     }
     
     return nil;
+}
+- (UIStoryboard *)mainStoryboard {
+    return [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+
 }
 - (NSString *)getLibraryPath {
     NSString* libraryPath = [NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES) objectAtIndex:0];

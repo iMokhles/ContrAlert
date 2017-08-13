@@ -78,8 +78,53 @@
 }
 
 - (IBAction)signUpButtonTapped:(id)sender {
-    if (![self checkValidateInputRules]) {
-        return;
+    if ([self checkValidateInputRules]) {
+    
+        // everything is okey
+        UIImage *avatar = self.avatarImage;
+        NSString *fullname = self.fullName;
+        NSString *username = self.userName;
+        NSString *email = self.email;
+        UIImage *cover = selectedCover;
+        NSString *password = _passwordField.text;
+        NSString *gender = _genderLabel.text;
+        
+        [[CAHelper sharedInstance] signupUser:@{
+                                                kUsersFullName: fullname,
+                                                kUsersUserName: username,
+                                                kUsersEmail: email,
+                                                kUsersPassword: password,
+                                                kUsersGender: gender} completion:^(id successed, NSError *error) {
+                                                    if (error != nil) {
+                                                        [[CAHelper sharedInstance] showPickerFromTarget:self withOptions:@[] andMessage:[error localizedDescription] completion:^(id object, NSError *error) {
+                                                            
+                                                        }];
+                                                    } else {
+                                                        // current user is created
+                                                        // upload avatar
+                                                        [[CAHelper sharedInstance] uploadUserProfileAvatar:avatar forUser:[PFUser currentUser] completion:^(id object, NSError *error) {
+                                                            if (error != nil) {
+                                                                [[CAHelper sharedInstance] showPickerFromTarget:self withOptions:@[] andMessage:[error localizedDescription] completion:^(id object, NSError *error) {
+                                                                    
+                                                                }];
+                                                            } else {
+                                                                
+                                                                // upload cover
+                                                                [[CAHelper sharedInstance] uploadUserProfileCover:cover forUser:[PFUser currentUser] completion:^(id object, NSError *error) {
+                                                                    if (error != nil) {
+                                                                        [[CAHelper sharedInstance] showPickerFromTarget:self withOptions:@[] andMessage:[error localizedDescription] completion:^(id object, NSError *error) {
+                                                                            
+                                                                        }];
+                                                                    } else {
+                                                                        
+                                                                    }
+                                                                }];
+                                                            }
+                                                        }];
+                                                    }
+                                                }];
+        
+        
     }
 }
 

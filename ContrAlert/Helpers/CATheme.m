@@ -14,6 +14,8 @@
 #import "PureLayout.h"
 #import "CAConstraintHelper.h"
 #import "FAKFontAwesome.h"
+#import "CAHelper.h"
+#import "ECSlidingViewController.h"
 
 @implementation CATheme
 
@@ -241,5 +243,39 @@ static id _sharedTheme = nil;
     
 //    [CAConstraintHelper layoutView:bottomView underView:topView withConstant:20];
     return introView;
+}
+- (void)setSideMenuTopViewController:(id)target {
+    if ([PFUser currentUser] != nil) {
+        ECSlidingViewController *mainViewController = [[[CAHelper sharedInstance] mainStoryboard] instantiateViewControllerWithIdentifier:@"slidingVC"];
+        mainViewController.topViewController = target;
+        [UIApplication sharedApplication].delegate.window.rootViewController = mainViewController;
+        
+        [UIView transitionWithView:[UIApplication sharedApplication].delegate.window
+                          duration:0.3
+                           options:UIViewAnimationOptionTransitionCrossDissolve
+                        animations:nil
+                        completion:nil];
+    }
+}
+- (void)setMainViewControllerIfNeeded {
+    if ([PFUser currentUser] != nil) {
+        ECSlidingViewController *mainViewController = [[[CAHelper sharedInstance] mainStoryboard] instantiateViewControllerWithIdentifier:@"slidingVC"];
+        [UIApplication sharedApplication].delegate.window.rootViewController = mainViewController;
+        
+        [UIView transitionWithView:[UIApplication sharedApplication].delegate.window
+                          duration:0.3
+                           options:UIViewAnimationOptionTransitionCrossDissolve
+                        animations:nil
+                        completion:nil];
+    } else {
+        
+        [UIApplication sharedApplication].delegate.window.rootViewController = [[[CAHelper sharedInstance] mainStoryboard] instantiateViewControllerWithIdentifier:@"launchNVC"];
+        
+        [UIView transitionWithView:[UIApplication sharedApplication].delegate.window
+                          duration:0.3
+                           options:UIViewAnimationOptionTransitionCrossDissolve
+                        animations:nil
+                        completion:nil];
+    }
 }
 @end

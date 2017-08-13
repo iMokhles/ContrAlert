@@ -69,6 +69,56 @@
 - (IBAction)backButtonTapped:(UIButton *)sender {
     [self.navigationController popViewControllerAnimated:YES];
 }
+- (IBAction)loginBtnTapped:(UIButton *)sender {
+     if ([self checkValidateInputRules]) {
+         NSString *username = self.usernameField.text;
+         NSString *password = self.passwordField.text;
+         
+         [[CAHelper sharedInstance] loginUser:@{
+                                                kUsersUserName: username,
+                                                kUsersPassword: password} completion:^(id object, NSError *error) {
+                                                    if (error != nil) {
+                                                        [[CAHelper sharedInstance] showPickerFromTarget:self withOptions:@[] andMessage:[error localizedDescription] completion:^(id object, NSError *error) {
+                                                            
+                                                        }];
+                                                    } else {
+                                                        [[CATheme defaultTheme] setMainViewControllerIfNeeded];
+                                                    }
+                                                }];
+     }
+    
+}
+
+- (IBAction)forgotBtnTapped:(UIButton *)sender {
+}
+- (IBAction)signupBtnTapped:(UIButton *)sender {
+}
+
+#pragma mark - Social Buttons
+- (IBAction)googleBtnTapped:(UIButton *)sender {
+}
+- (IBAction)facebookBtnTapped:(UIButton *)sender {
+}
+- (IBAction)twitterBtnTapped:(UIButton *)sender {
+}
+
+#pragma mark - Checks
+- (BOOL)checkValidateInputRules {
+    
+    if (![[CAHelper sharedInstance] isValidUsername:_usernameField.text]) {
+        [[CAHelper sharedInstance] showPickerFromTarget:self withOptions:@[] andMessage:@"Invalid Username" completion:^(id object, NSError *error) {
+            
+        }];
+        return NO;
+    }
+    if (![[CAHelper sharedInstance] isValidPassword:_passwordField.text]) {
+        [[CAHelper sharedInstance] showPickerFromTarget:self withOptions:@[] andMessage:@"Invalid Password" completion:^(id object, NSError *error) {
+            
+        }];
+        return NO;
+    }
+    return YES;
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

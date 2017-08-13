@@ -36,4 +36,8 @@
 - (void)addCornerView:(UIView *)view radius:(float)radius;
 - (void)makeCircleView:(UIView *)view;
 - (void)setShadowToView:(UIView *)view color:(UIColor *)color offset:(CGSize)offset radius:(float)radius opacity:(float)opacity;
+
+#pragma mark - Launch Theme Configurations
+- (void)setMainViewControllerIfNeeded;
+- (void)setSideMenuTopViewController:(id)target;
 @end

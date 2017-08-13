@@ -139,6 +139,9 @@
 		439561C11ECF05490008F74F /* ECSlidingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 439561BA1ECF05490008F74F /* ECSlidingViewController.m */; };
 		439561C21ECF05490008F74F /* UIViewController+ECSlidingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 439561BC1ECF05490008F74F /* UIViewController+ECSlidingViewController.m */; };
 		439561C61ECF05FB0008F74F /* SideMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 439561C51ECF05FB0008F74F /* SideMenuViewController.m */; };
+		43D10DB61F40A9F5008699A2 /* CASideMenuCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 43D10DB51F40A9F5008699A2 /* CASideMenuCell.m */; };
+		43D10DBA1F40B231008699A2 /* CANavigationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 43D10DB91F40B231008699A2 /* CANavigationView.m */; };
+		43D10DBE1F40B513008699A2 /* CAHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43D10DBD1F40B513008699A2 /* CAHomeViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -433,6 +436,12 @@
 		439561BC1ECF05490008F74F /* UIViewController+ECSlidingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+ECSlidingViewController.m"; sourceTree = "<group>"; };
 		439561C41ECF05FB0008F74F /* SideMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SideMenuViewController.h; sourceTree = "<group>"; };
 		439561C51ECF05FB0008F74F /* SideMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SideMenuViewController.m; sourceTree = "<group>"; };
+		43D10DB41F40A9F5008699A2 /* CASideMenuCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CASideMenuCell.h; sourceTree = "<group>"; };
+		43D10DB51F40A9F5008699A2 /* CASideMenuCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CASideMenuCell.m; sourceTree = "<group>"; };
+		43D10DB81F40B231008699A2 /* CANavigationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CANavigationView.h; sourceTree = "<group>"; };
+		43D10DB91F40B231008699A2 /* CANavigationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CANavigationView.m; sourceTree = "<group>"; };
+		43D10DBC1F40B513008699A2 /* CAHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAHomeViewController.h; sourceTree = "<group>"; };
+		43D10DBD1F40B513008699A2 /* CAHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CAHomeViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -494,6 +503,7 @@
 		430274501EA7A5D400042809 /* ContrAlert */ = {
 			isa = PBXGroup;
 			children = (
+				43D10DB71F40B215008699A2 /* Views */,
 				4302748E1EA7B35D00042809 /* AppDelegate */,
 				430274911EA7B35D00042809 /* CoreData */,
 				430274C11EA7D59300042809 /* Frameworks */,
@@ -559,6 +569,7 @@
 		4302749C1EA7B35D00042809 /* SideMenu */ = {
 			isa = PBXGroup;
 			children = (
+				43D10DB31F40A9B9008699A2 /* Cells */,
 				439561C31ECF05D50008F74F /* SideMenuViewController */,
 				439561AF1ECF05490008F74F /* ECSlidingViewController */,
 				4302749D1EA7B35D00042809 /* Header */,
@@ -632,6 +643,7 @@
 		430274B01EA7B35D00042809 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				43D10DBB1F40B4F3008699A2 /* HomeViewController */,
 				439561AB1ECEFE5F0008F74F /* TimelineViewController */,
 				4369011C1EACA432007F1534 /* SignupStepsControllers */,
 				4369010B1EAC9282007F1534 /* SignupViewController */,
@@ -1119,6 +1131,33 @@
 			name = SideMenuViewController;
 			sourceTree = "<group>";
 		};
+		43D10DB31F40A9B9008699A2 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				43D10DB41F40A9F5008699A2 /* CASideMenuCell.h */,
+				43D10DB51F40A9F5008699A2 /* CASideMenuCell.m */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
+		43D10DB71F40B215008699A2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				43D10DB81F40B231008699A2 /* CANavigationView.h */,
+				43D10DB91F40B231008699A2 /* CANavigationView.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		43D10DBB1F40B4F3008699A2 /* HomeViewController */ = {
+			isa = PBXGroup;
+			children = (
+				43D10DBC1F40B513008699A2 /* CAHomeViewController.h */,
+				43D10DBD1F40B513008699A2 /* CAHomeViewController.m */,
+			);
+			name = HomeViewController;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1274,6 +1313,7 @@
 				439561C11ECF05490008F74F /* ECSlidingViewController.m in Sources */,
 				436901A31EAD5E8E007F1534 /* NSMutableDictionary+BlocksKit.m in Sources */,
 				430274B91EA7B35D00042809 /* CAMenuHeaderHelper.m in Sources */,
+				43D10DB61F40A9F5008699A2 /* CASideMenuCell.m in Sources */,
 				439561BE1ECF05490008F74F /* ECSlidingAnimationController.m in Sources */,
 				436901B11EAD5E8E007F1534 /* NSURLConnection+BlocksKit.m in Sources */,
 				436901C01EAD5E8E007F1534 /* UITextView+BlocksKit.m in Sources */,
@@ -1289,6 +1329,7 @@
 				436901C11EAD5E8E007F1534 /* UIView+BlocksKit.m in Sources */,
 				436901A41EAD5E8E007F1534 /* NSMutableIndexSet+BlocksKit.m in Sources */,
 				436901BA1EAD5E8E007F1534 /* UIControl+BlocksKit.m in Sources */,
+				43D10DBA1F40B231008699A2 /* CANavigationView.m in Sources */,
 				436901AA1EAD5E8E007F1534 /* NSObject+BKBlockObservation.m in Sources */,
 				430274B51EA7B35D00042809 /* ContrAlert.xcdatamodeld in Sources */,
 				436900FC1EAC0246007F1534 /* FAKFoundationIcons.m in Sources */,
@@ -1308,6 +1349,7 @@
 				4369013A1EAD560D007F1534 /* RSKInternalUtility.m in Sources */,
 				439561AE1ECEFE7F0008F74F /* TimelineViewController.m in Sources */,
 				436901FB1EAD6FFB007F1534 /* TOCropScrollView.m in Sources */,
+				43D10DBE1F40B513008699A2 /* CAHomeViewController.m in Sources */,
 				430274BF1EA7B35D00042809 /* ViewController.m in Sources */,
 				436726FA1EAB776300418797 /* EAIntroPage.m in Sources */,
 				436901B41EAD5E8E007F1534 /* MFMailComposeViewController+BlocksKit.m in Sources */,
